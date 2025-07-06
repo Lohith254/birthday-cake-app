@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffeef2;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #c94f7c;
+}
+
+.form-container {
+  margin: 20px;
+}
+
+#addCandleBtn {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #ff87ab;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+#addCandleBtn:hover {
+  background-color: #ff5c95;
+}
+
+#candleCount {
+  margin-left: 15px;
+  font-size: 18px;
+  color: #444;
+}
+
+.cake-container {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#cake {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+  position: relative;
+}
+
+#candlesContainer {
+  position: absolute;
+  top: 35%;
+  left: 14%;
+  width: 72%;
+  height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.candle {
+  position: absolute;
+  bottom: 100%;
+  width: 6px;
+  height: 40px;
+  background: pink;
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+.flame {
+  width: 12px;
+  height: 12px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -14px;
+  left: -3px;
+  animation: flicker 0.3s infinite alternate;
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.8);
+}
+
+@keyframes flicker {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2) translateY(-2px);
+    opacity: 0.8;
+  }
+}
+
+.instruction {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+#confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+#message {
+  font-size: 22px;
+  color: #6a1b9a;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .cake-container {
+    width: 150px;
+  }
+
+  .candle {
+    height: 30px;
+  }
+
+  .flame {
+    width: 10px;
+    height: 10px;
+  }
+
+  #addCandleBtn {
+    font-size: 14px;
+  }
+}

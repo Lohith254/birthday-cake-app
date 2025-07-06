@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Cake with Candles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎂 Happy Birthday 🎉</h1>
+
+  <div class="form-container">
+    <button id="addCandleBtn">+ Add Candle</button>
+    <span id="candleCount">Candles: 0</span>
+  </div>
+
+  <div class="cake-container">
+    <img src="assets/cake.png" id="cake" alt="Birthday Cake" />
+    <div id="candlesContainer"></div>
+  </div>
+
+  <p class="instruction">Blow candles!</p>
+  <audio id="birthdaySong" src="assets/birthday.mp3" preload="auto"></audio>
+  <canvas id="confetti-canvas"></canvas>
+  <p id="message" class="hidden">🎉 Happy Birthday! 🎉</p>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
